@@ -6,7 +6,7 @@ namespace DeltaTime {
     public class QuickRestartMod : BaseUnityPlugin {
 
         public const string versionNumber = "0.0.1";
-        public const string buildNumber = "24";
+        public const string buildNumber = "26";
 
         //Apply hooks
         QuickRestartMod() {
@@ -55,16 +55,18 @@ namespace DeltaTime {
                 Debug.Log("Undie! Failed to get realized creature.");
                 return;
             }
+            //Remove creature from Dens
+
             //Initial revive
             creature.state.alive = true;
             realizedCreature.dead = false;
             //realizedCreature.AllGraspsLetGoOfThisObject(true);
-            realizedCreature.SetKillTag(null);
             //realizedCreature.stun = 0;
             if (realizedCreature.inShortcut) {
-                realizedCreature.inShortcut = false;
+                //creature.realizedCreature.SpitOutOfShortCut();
+                creature.IsExitingDen();
+                return;
             }
-            realizedCreature.stun = 0;
             //In case the creature is deleted/removed from the room
             if (realizedCreature.room == null) {
                 Debug.Log("Undie! Failed to get room creature is in. Adding creature back to room");
@@ -81,11 +83,6 @@ namespace DeltaTime {
                 (creature.realizedCreature as Player).bodyMode = Player.BodyModeIndex.Crawl;
                 (creature.realizedCreature as Player).animation = Player.AnimationIndex.None;
             }
-            if (creature.Room == null) {
-                Debug.Log("Undie! Failed to get abstract creature room");
-                return;
-            }
-            //Unstick(creature);
             //Ungrasp wormgrass from creature.
             /*
             foreach(IAccessibilityModifier o in creatureRoom.accessModifiers) {
