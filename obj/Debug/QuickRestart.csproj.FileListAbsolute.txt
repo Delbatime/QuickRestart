@@ -1,4 +1,4 @@
 E:\Folders\RAINWORLD\_Projects\QuickRestart\QuickRestart\bin\Debug\QuickRestart.dll
-E:\Folders\RAINWORLD\_Projects\QuickRestart\QuickRestart\obj\Debug\QuickRestart.csproj.AssemblyReference.cache
 E:\Folders\RAINWORLD\_Projects\QuickRestart\QuickRestart\obj\Debug\QuickRestart.csproj.CoreCompileInputs.cache
 E:\Folders\RAINWORLD\_Projects\QuickRestart\QuickRestart\obj\Debug\QuickRestart.dll
+E:\Folders\RAINWORLD\_Projects\QuickRestart\QuickRestart\obj\Debug\QuickRestart.csproj.AssemblyReference.cache

@@ -1,0 +1,19 @@
+About the issue:
+
+Only happens when you die in a den or die through deletion (Like falling out of a room)
+
+Leviathans have...interesting effects when you die to them.
+
+
+It appears the AI breaking effect happens when you either abstractize the creature (from putting them into a den) or delete them.
+   Abstractizing the creature does delete them, test whenever they will always do this.
+   
+   
+PoleMimic.Stickchunks will not change after the player dies, this is what causes the passiveness.
+
+Apparently physical objects are separated by collision layer in this game.
+
+
+Weird glitches : You can kill yourself with spears after dying to leviathan?
+Dlls/DLL walls cannot grab you after eating you
+When reviving too early to a leviathan you get softlocked [FIXED]
